@@ -24,7 +24,7 @@ My program will allow for data to be updated throughout the season. The race_res
 
 
 ## Deducting & rewarding extra points
- -Although I have not deducted any points, my program does allow for it. There is a penalty column on the race_results table, which is taken into consideration when the points are calculated for that driver. The penalty is default to 0 unless changed or updated for a particular race.
+- Although I have not deducted any points, my program does allow for it. There is a penalty column on the race_results table, which is taken into consideration when the points are calculated for that driver. The penalty is default to 0 unless changed or updated for a particular race.
 - Similarly, the fastest_lap is a column on race_results, which defaults to false. When a driver has the fastest lap and is set to true, then an extra point is awarded.
 - If 75 per cent of the race distance has not been completed and the race cannot be resumed, half points are awarded. By default the completion is set to 100, but if updated to less than 75, the points for that race will be halved.
 
