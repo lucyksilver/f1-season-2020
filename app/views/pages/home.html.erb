@@ -1,13 +1,28 @@
-<% @drivers.each do |driver| %>
-  <p><%= driver.name %>
-  <%= driver.constructor.name %>
-  <%= driver.overall_points %></p>
-<% end %>
+<div class="container">
+  <h1>F1 Drivers 2020</h1>
 
-<h2>con</h2>
+<div class="cards">
+  <% @drivers.each_with_index do |driver, index| %>
+  <div class="card p-3">
+    <div class='d-flex justify-content-between'>
+      <h2><%= index + 1 %></h2>
+      <h2><%= driver.overall_points %> <small>pts</small></h2>
+    </div>
+    <div class='d-flex justify-content-between align-items-center bg-light p-3 grey-box'>
+      <p class='m-0'><%= driver.name %></p>
+      <p class='font-weight-bold m-0'><%= driver.constructor.name %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+<h2>F1 Drivers 2020</h2>
 <% @constructors.each do |constructor| %>
   <p class='font-weight-light'> <%= constructor.drivers.first.name %>
   <%= constructor.drivers.last.name %>
   <%= constructor.constructor_points %>
   </p>
 <% end %>
+
+</div>

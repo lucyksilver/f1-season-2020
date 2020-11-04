@@ -4,7 +4,7 @@ class Driver < ApplicationRecord
 
   def overall_points
     sum = 0
-    self.race_results.each do |race|
+    race_results.each do |race|
       sum += race.race_points(race.position)
       if race.fastest_lap
         sum += 1
@@ -12,4 +12,18 @@ class Driver < ApplicationRecord
     end
     sum
   end
+
+  # def overall_position
+  #   # position = 1
+  #   Driver.all.inject do |memo, second_driver|
+  #     # if memo.overall_points > second_driver.overall_points
+  #       # position += 1
+  #       # memo = second_driver
+  #     # elsif memo.overall_points == second_driver.overall_points
+  #       # position
+  #       # memo = second_driver
+  #      # end
+  #   end
+  #   # position
+  # end
 end

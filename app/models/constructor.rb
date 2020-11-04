@@ -3,7 +3,7 @@ class Constructor < ApplicationRecord
 
   def constructor_points
     sum = 0
-    self.drivers.each do |driver|
+    drivers.each do |driver|
       sum += driver.overall_points
     end
     sum
