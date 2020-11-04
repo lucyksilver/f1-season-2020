@@ -7,7 +7,7 @@
       <div class="card p-3">
         <div class='d-flex justify-content-between'>
           <h2><%= index + 1 %></h2>
-          <h2><%= driver.overall_points %> <small>pts</small></h2>
+          <h2><%= pluralize(driver.overall_points, 'pt') %></h2>
         </div>
         <div class='d-flex justify-content-between align-items-center bg-light p-3 grey-box <%= 'williams' if driver.williams? %>'>
           <p class='m-0'><%= driver.name %></p>
@@ -26,7 +26,7 @@
       <div class="card p-3">
         <div class='d-flex justify-content-between'>
           <h2><%= index + 1 %></h2>
-          <h2><%= constructor.constructor_points %> <small>pts</small></h2>
+          <h2><%= pluralize(constructor.constructor_points, 'pt') %></h2>
         </div>
         <div class='d-flex justify-content-between align-items-center bg-light p-3 grey-box <%= 'williams' if constructor.williams? %>'>
           <div>

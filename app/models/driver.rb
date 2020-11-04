@@ -18,17 +18,12 @@ class Driver < ApplicationRecord
     constructor.name == 'Williams'
   end
 
+
   # def overall_position
-  #   # position = 1
-  #   Driver.all.inject do |memo, second_driver|
-  #     # if memo.overall_points > second_driver.overall_points
-  #       # position += 1
-  #       # memo = second_driver
-  #     # elsif memo.overall_points == second_driver.overall_points
-  #       # position
-  #       # memo = second_driver
-  #      # end
-  #   end
-  #   # position
+  # My aim was to use the reduce/inject method on all drivers to compare their overall scores
+  # if the overall score was greater for the first driver, then the position would increment
+  # the second driver would become the first driver in the reduce method
+  # else if the overall score of the first was equal to the next one, then the position would stay the same
+  # unfortunately I couldn't get this working, so I used iteration with index
   # end
 end
