@@ -1,5 +1,13 @@
 <% @drivers.each do |driver| %>
-  <%= driver.name %>
+  <p><%= driver.name %>
   <%= driver.constructor.name %>
-<%= driver.overall_points %>
+  <%= driver.overall_points %></p>
+<% end %>
+
+<h2>con</h2>
+<% @constructors.each do |constructor| %>
+  <p class='font-weight-light'> <%= constructor.drivers.first.name %>
+  <%= constructor.drivers.last.name %>
+  <%= constructor.constructor_points %>
+  </p>
 <% end %>

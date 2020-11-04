@@ -18,4 +18,8 @@ class RaceResult < ApplicationRecord
   def race_points(position)
     POINTS[position]
   end
+
+  def deduct_points(position, minus_points)
+    POINTS[position] - minus_points
+  end
 end
