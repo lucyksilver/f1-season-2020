@@ -1,8 +1,3 @@
-RaceResult.destroy_all
-Driver.destroy_all
-Race.destroy_all
-Constructor.destroy_all
-
 merc =Constructor.create!(name: 'Mercedes')
 red =Constructor.create!(name: 'Red Bull')
 fer = Constructor.create!(name: 'Ferrari')
@@ -73,10 +68,6 @@ RaceResult.create!(race: three, driver: kvy, position: '8')
 RaceResult.create!(race: three, driver: gasly, position: '9')
 RaceResult.create!(race: three, driver: albon, position: '10')
 
-
-p Driver.all.last
-p Constructor.all.last
-p RaceResult.all.last
 
 
 
