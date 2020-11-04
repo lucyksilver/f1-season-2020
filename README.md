@@ -1,12 +1,16 @@
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
 # F1 Season 2020
 
+## Setup
+Run the setup of the program:
+```rails db:create db:migrate db:seed```
+
 ## Launching the program 
 My program was built with Ruby on Rails (version 6.0.3.4). To launch the program type either run ```rails s``` in the terminal or view on Heroku here: https://f1-season-2020.herokuapp.com/.
 
 
 ## The program
-My data, points and final positioning are based on the three races that were in the instructions (race one, two and three). However, my data does include all 21 drivers and all 10 teams even if they did not finish in the top 10 of the three races. 
+My data, points and final positioning are based on the three races that were in the instructions (race one, two and three) they are in the `seed.rb` file. However, my data does include all 21 drivers and all 10 teams even if they did not finish in the top 10 of the three races. 
 
 
 ## Drivers Standings & Constructor Standings 
@@ -20,7 +24,7 @@ Unfortunately, in the time that I had I was unable to achieve the desired positi
 
 
 ## Updating Data
-My program will allow for data to be updated throughout the season. The race_result model is made up of a race, a driver and his position for that specific race. This allows for drivers to be easily swapped in for different races. I did not include an interface for this program - changes can be made in the seed.
+My program will allow for data to be updated throughout the season. The race_result model is made up of a race, a driver and his position for that specific race. This allows for drivers to be easily swapped in for different races. Although there is no interface, changes can be made in the seed.
 
 
 ## Deducting & rewarding extra points
