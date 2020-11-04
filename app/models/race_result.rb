@@ -15,11 +15,11 @@ class RaceResult < ApplicationRecord
     '10' => 1,
   }
 
-  def race_points(position)
-    POINTS[position]
-  end
-
-  def deduct_points(position, minus_points)
-    POINTS[position] - minus_points
+  def race_points
+    points = POINTS[position] - penalty
+    if completion <= 75
+      points = points / 2
+    end
+    points
   end
 end

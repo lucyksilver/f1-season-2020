@@ -4,13 +4,18 @@ class Driver < ApplicationRecord
 
   def overall_points
     sum = 0
-    race_results.each do |race|
-      sum += race.race_points(race.position)
-      if race.fastest_lap
+    race_results.each do |race_result|
+      sum += race_result.race_points
+      if race_result.fastest_lap
         sum += 1
       end
     end
     sum
+  end
+
+
+  def williams?
+    constructor.name == 'Williams'
   end
 
   # def overall_position

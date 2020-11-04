@@ -8,4 +8,8 @@ class Constructor < ApplicationRecord
     end
     sum
   end
+
+  def williams?
+    name == 'Williams'
+  end
 end
